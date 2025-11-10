@@ -84,11 +84,22 @@ La arquitectura REST está basada en estándares web que utilizan **métodos HTT
 
 ---
 
-## 📒 Implementación de una API REST. 📒
- 
+## Enrutamiento en Spring Boot.
+
+El enrutamiento (asignación de URL) es el proceso mediante el cual Spring Boot decide qué método de controlador ejecutar en respuesta a una solicitud HTTP específica mediante la asignación de URLs a métodos de controlador con base a las anotaciones usadas en esos métodos. Se utilizan varias anotaciones de mapeo para definir qué método de controlador manejará una solicitud HTTP específica. Anotaciones más comunes:
+
+- **@GetMapping**: mapea las solicitudes HTTP GET a métodos concretos. 
+- **@PostMapping**: mapea las solicitudes HTTP POST a métodos concretos.Esta notación es una forma conveniente de especificar que un método debe ser invocado cuando llega una solicitud POST a una URL específica. Una solicitud del tipo POST es uno de los métodos HTTP usados para enviar datos a un servidor y crear un nuevo recurso. Cuando se realiza una solicitud POST, se está solicitando al servidor que acepte los datos incluidos en el cuerpo de la solicitud y los procese de acuerdo con la lógica de la aplicación.
+- **@PutMapping**: mapea las solicitudes HTTP PUT a métodos concretos.
+- **@DeleteMapping**: mapea las solicitudes HTTP DELETE a métodos concretos. Se usa para mapear métodos de controlador específicos que generalmente se usan para eliminar un recurso existente en el servidor. Enruta la solicitud al método que hayamos esepcificado mediante la URL asignada.
+- **@RequestBody**: se utiliza para anotar argumentos del método del controlador de solicitudes. Indica que un parámetro de método debe estar vinculado al valor del cuerpo de la solicitud HTTP. Se encarga de indicar que un objeto se construirá a partir de la información enviada en el body del request para la petición de este servicio.
+- **@PatchMapping**: es parte de la familia de anotaciones para mapear solicitudes HTTP, y se usa para mapear solicitudes HTTP del tipo PATCH a métodos de controlador que se encargan de realizar la modificación parcial de recursos en nuestro sistema. Una solicitud HTTP del tipo PATCH se usa para aplicar modificaciones parciales en recursos existentes sin necesidad de enviar la representación completa del recurso. A diferencia de PUT, que reemplaza por completo el recurso, PATCH permite actualizar solo algunos campos del recurso existente.
+
+Spring Boot usa un enfoque basado en patrones para asignar solicitudes a métodos de controlador. Esto significa que puede tener múltiples métodos de controlador con la misma ruta de acceso base, pero diferentes patrones adicionales, como parámetros de ruta o extensiones para diferenciarlos.
+
 ---
 
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
 ---
 
